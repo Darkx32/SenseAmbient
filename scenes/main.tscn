@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bp8vqi6cqkaki"]
+
+[ext_resource type="Script" uid="uid://dmyhkn7qraxqq" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://b01ni6r4doy75" path="res://scenes/joyScreen.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c4ig7c5rip5rw" path="res://scenes/sadScreen.tscn" id="3_sugp2"]
+
+[node name="Control" type="Control" unique_id=457604795]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_o5qli")
+
+[node name="ScreenContainer" type="Control" parent="." unique_id=131190642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="joyScreen" parent="ScreenContainer" unique_id=1418911423 instance=ExtResource("2_0wfyh")]
+layout_mode = 1
+
+[node name="sadScreen" parent="ScreenContainer" unique_id=890553158 instance=ExtResource("3_sugp2")]
+layout_mode = 1
