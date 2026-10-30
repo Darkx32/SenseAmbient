@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brpndb3nwnpvq"
-path="res://.godot/imported/3.png-e7b6311b92df24e3faaf986c639d1d66.ctex"
+uid="uid://vv2n7j8ni8a5"
+path="res://.godot/imported/sinistro.png-be0d15245d9decef2ce6cb0b96a31ac0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sad_parallax/3.png"
-dest_files=["res://.godot/imported/3.png-e7b6311b92df24e3faaf986c639d1d66.ctex"]
+source_file="res://assets/sinistro.png"
+dest_files=["res://.godot/imported/sinistro.png-be0d15245d9decef2ce6cb0b96a31ac0.ctex"]
 
 [params]
 

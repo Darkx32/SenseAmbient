@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b01ni6r4doy75" path="res://scenes/joyScreen.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c4ig7c5rip5rw" path="res://scenes/sadScreen.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bj32buce3jfar" path="res://scenes/anxietyScreen.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c7hy6v7s5iqwd" path="res://scenes/fearScreen.tscn" id="5_tbgi4"]
 
 [node name="Control" type="Control" unique_id=457604795]
 clip_contents = true
@@ -32,4 +33,7 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="anxietyScreen" parent="ScreenContainer" unique_id=1693131433 instance=ExtResource("4_jyhfs")]
+layout_mode = 1
+
+[node name="fearScreen" parent="ScreenContainer" unique_id=1381377356 instance=ExtResource("5_tbgi4")]
 layout_mode = 1

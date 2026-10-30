@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cj1ywlrx7vkbe"]
+
+[ext_resource type="Texture2D" uid="uid://vv2n7j8ni8a5" path="res://assets/sinistro.png" id="1_4o4iy"]
+
+[node name="Jumpscare" type="Sprite2D" unique_id=1586582538]
+modulate = Color(0.21230483, 0.21230483, 0.21230483, 1)
+scale = Vector2(0.18222223, 0.16000001)
+texture = ExtResource("1_4o4iy")
