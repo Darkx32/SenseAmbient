@@ -97,8 +97,8 @@ func _update_active_screen() -> void:
 		if screen == null:
 			continue
 
-		if screen.has_method("clear_particles"):
-			screen.clear_particles()
+		if screen.has_method("clear"):
+			screen.clear()
 
 		if screen.has_method("set_active"):
 			screen.set_active(i == current_screen)

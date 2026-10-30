@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bj32buce3jfar"]
+
+[ext_resource type="Script" uid="uid://fkhjrspqju6h" path="res://scripts/anxiety_screen.gd" id="1_ra4tg"]
+[ext_resource type="Script" uid="uid://bxjhnq8pfuk62" path="res://scripts/anxiety_effect.gd" id="2_sejhj"]
+
+[node name="anxietyScreen" type="Control" unique_id=1693131433]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ra4tg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=730367390]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9254902, 0.85490197, 0.7607843, 1)
+script = ExtResource("2_sejhj")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dmyhkn7qraxqq" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b01ni6r4doy75" path="res://scenes/joyScreen.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c4ig7c5rip5rw" path="res://scenes/sadScreen.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bj32buce3jfar" path="res://scenes/anxietyScreen.tscn" id="4_jyhfs"]
 
 [node name="Control" type="Control" unique_id=457604795]
 clip_contents = true
@@ -28,4 +29,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="sadScreen" parent="ScreenContainer" unique_id=890553158 instance=ExtResource("3_sugp2")]
+layout_mode = 1
+
+[node name="anxietyScreen" parent="ScreenContainer" unique_id=1693131433 instance=ExtResource("4_jyhfs")]
 layout_mode = 1

@@ -51,7 +51,7 @@ func generate_scene():
 			else:
 				tilemap.set_cell(tile_position, 0, tiles[3])
 
-func clear_particles() -> void:
+func clear() -> void:
 	for child in get_children():
 		if child is GPUParticles2D:
 			child.queue_free()
