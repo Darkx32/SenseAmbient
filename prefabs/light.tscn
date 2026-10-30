@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cddbwdblwxo3y"]
+
+[ext_resource type="Script" uid="uid://8t28bla4deb2" path="res://scripts/lights_city.gd" id="1_qppc6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6du0e"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_11sm7"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qppc6"]
+gradient = SubResource("Gradient_11sm7")
+
+[node name="Light" type="Sprite2D" unique_id=396407800]
+modulate = Color(1, 0.72156864, 0.36078432, 1)
+material = SubResource("CanvasItemMaterial_6du0e")
+scale = Vector2(0.009765667, 1.999995)
+texture = SubResource("GradientTexture2D_qppc6")
+script = ExtResource("1_qppc6")

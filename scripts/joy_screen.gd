@@ -24,22 +24,15 @@ func _ready() -> void:
 
 	generate_scene()
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			create_flowers(event.position)
+func on_tap(local_position: Vector2) -> void:
+	create_flowers(local_position)
 
-	elif event is InputEventScreenTouch:
-		if event.pressed:
-			create_flowers(event.position)
-
-func create_flowers(particle_position: Vector2):
-	var local_position = get_global_transform().affine_inverse() * particle_position
+func create_flowers(local_position: Vector2):
 	var particles = FLOWER_PARTICLE.instantiate() as GPUParticles2D
 	particles.emitting = true
 	particles.finished.connect(particles.queue_free)
-	add_child(particles)
 	particles.position = local_position
+	add_child(particles)
 
 func generate_scene():
 	tilemap.clear()
@@ -57,3 +50,8 @@ func generate_scene():
 				tilemap.set_cell(tile_position, 0, tiles[2])
 			else:
 				tilemap.set_cell(tile_position, 0, tiles[3])
+
+func clear_particles() -> void:
+	for child in get_children():
+		if child is GPUParticles2D:
+			child.queue_free()

@@ -41,6 +41,7 @@ func _input(event: InputEvent) -> void:
 
 			if active_tween and active_tween.is_running():
 				active_tween.kill()
+				gesture_consumed = true
 		else:
 			if is_dragging:
 				var distance: float = event.position.x - touch_start.x
@@ -95,7 +96,9 @@ func _update_active_screen() -> void:
 
 		if screen == null:
 			continue
-		clear_particles()
+
+		if screen.has_method("clear_particles"):
+			screen.clear_particles()
 
 		if screen.has_method("set_active"):
 			screen.set_active(i == current_screen)
@@ -113,7 +116,3 @@ func _dispatch_tap(pos: Vector2) -> void:
 		)
 
 		screen.on_tap(local_pos)
-
-func clear_particles():
-	for node in get_tree().root.find_children("*", "GPUParticles2D", true, false):
-		node.queue_free()
