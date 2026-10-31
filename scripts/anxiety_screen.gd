@@ -67,3 +67,7 @@ func on_tap(local_position: Vector2):
 func clear() -> void:
 	if background.has_method("clear_effects"):
 		background.clear_effects()
+
+	for child in get_children():
+		if child is AudioStreamPlayer:
+			child.queue_free()

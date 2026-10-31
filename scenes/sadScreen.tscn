@@ -14,9 +14,8 @@ diffuse_texture = ExtResource("2_1mqe4")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uwc6k"]
 particle_flag_disable_z = true
-emission_shape_scale = Vector3(1, 220, 1)
 emission_shape = 3
-emission_box_extents = Vector3(360, 1, 1)
+emission_box_extents = Vector3(780, 360, 1)
 direction = Vector3(0.1, 1, 0)
 spread = 5.0
 initial_velocity_min = 300.0
@@ -24,187 +23,193 @@ initial_velocity_max = 450.0
 gravity = Vector3(0, 0, 0)
 
 [node name="sadScreen" type="Control" unique_id=890553158]
-custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_hoff4")
 
 [node name="Background" type="TextureRect" parent="." unique_id=202964348]
-modulate = Color(0.38549265, 0.38549244, 0.38549256, 1)
+self_modulate = Color(0.38431373, 0.38431373, 0.38431373, 1)
 material = SubResource("ShaderMaterial_ptwqs")
-layout_mode = 0
-offset_right = 640.0
-offset_bottom = 360.0
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("CanvasTexture_ljs3r")
 expand_mode = 1
 
-[node name="Lights" type="Node2D" parent="." unique_id=371084519]
+[node name="Lights" type="Node2D" parent="Background" unique_id=371084519]
+position = Vector2(-1, 0)
 
-[node name="Light" parent="Lights" unique_id=396407800 instance=ExtResource("3_i6468")]
+[node name="Light" parent="Background/Lights" unique_id=396407800 instance=ExtResource("3_i6468")]
 position = Vector2(215.58594, 288.50003)
 scale = Vector2(0.07543928, 0.046873692)
 
-[node name="Light2" parent="Lights" unique_id=681895467 instance=ExtResource("3_i6468")]
+[node name="Light2" parent="Background/Lights" unique_id=681895467 instance=ExtResource("3_i6468")]
 position = Vector2(230.79297, 289.25003)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light3" parent="Lights" unique_id=586801392 instance=ExtResource("3_i6468")]
+[node name="Light3" parent="Background/Lights" unique_id=586801392 instance=ExtResource("3_i6468")]
 position = Vector2(239, 316)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light4" parent="Lights" unique_id=1527326418 instance=ExtResource("3_i6468")]
+[node name="Light4" parent="Background/Lights" unique_id=1527326418 instance=ExtResource("3_i6468")]
 position = Vector2(215.5, 341.62503)
 scale = Vector2(0.07812468, 0.042968147)
 
-[node name="Light5" parent="Lights" unique_id=1084109561 instance=ExtResource("3_i6468")]
+[node name="Light5" parent="Background/Lights" unique_id=1084109561 instance=ExtResource("3_i6468")]
 position = Vector2(264, 347.3125)
 scale = Vector2(0.12499994, 0.05273393)
 
-[node name="Light6" parent="Lights" unique_id=471435421 instance=ExtResource("3_i6468")]
+[node name="Light6" parent="Background/Lights" unique_id=471435421 instance=ExtResource("3_i6468")]
 position = Vector2(285.5, 354)
 scale = Vector2(0.1406254, 0.05273393)
 
-[node name="Light7" parent="Lights" unique_id=2093278368 instance=ExtResource("3_i6468")]
+[node name="Light7" parent="Background/Lights" unique_id=2093278368 instance=ExtResource("3_i6468")]
 position = Vector2(296.5, 320.5)
 scale = Vector2(0.14062503, 0.04687488)
 
-[node name="Light8" parent="Lights" unique_id=823792770 instance=ExtResource("3_i6468")]
+[node name="Light8" parent="Background/Lights" unique_id=823792770 instance=ExtResource("3_i6468")]
 position = Vector2(310, 320.5)
 scale = Vector2(0.14062503, 0.046874903)
 
-[node name="Light9" parent="Lights" unique_id=1815966579 instance=ExtResource("3_i6468")]
+[node name="Light9" parent="Background/Lights" unique_id=1815966579 instance=ExtResource("3_i6468")]
 position = Vector2(321, 340.5)
 scale = Vector2(0.14062503, 0.046874512)
 
-[node name="Light10" parent="Lights" unique_id=388039280 instance=ExtResource("3_i6468")]
+[node name="Light10" parent="Background/Lights" unique_id=388039280 instance=ExtResource("3_i6468")]
 position = Vector2(359.5, 343.5)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light11" parent="Lights" unique_id=938139927 instance=ExtResource("3_i6468")]
+[node name="Light11" parent="Background/Lights" unique_id=938139927 instance=ExtResource("3_i6468")]
 position = Vector2(349, 297)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light12" parent="Lights" unique_id=435309758 instance=ExtResource("3_i6468")]
+[node name="Light12" parent="Background/Lights" unique_id=435309758 instance=ExtResource("3_i6468")]
 position = Vector2(389.00003, 304.00003)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light13" parent="Lights" unique_id=1443125989 instance=ExtResource("3_i6468")]
+[node name="Light13" parent="Background/Lights" unique_id=1443125989 instance=ExtResource("3_i6468")]
 position = Vector2(419.00003, 304.00003)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light14" parent="Lights" unique_id=2108778542 instance=ExtResource("3_i6468")]
+[node name="Light14" parent="Background/Lights" unique_id=2108778542 instance=ExtResource("3_i6468")]
 position = Vector2(429.00003, 337.00003)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light15" parent="Lights" unique_id=80638528 instance=ExtResource("3_i6468")]
+[node name="Light15" parent="Background/Lights" unique_id=80638528 instance=ExtResource("3_i6468")]
 position = Vector2(459.00003, 344.00003)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light16" parent="Lights" unique_id=1737054682 instance=ExtResource("3_i6468")]
+[node name="Light16" parent="Background/Lights" unique_id=1737054682 instance=ExtResource("3_i6468")]
 position = Vector2(470.00003, 324)
 scale = Vector2(0.10937517, 0.04687425)
 
-[node name="Light17" parent="Lights" unique_id=322565835 instance=ExtResource("3_i6468")]
+[node name="Light17" parent="Background/Lights" unique_id=322565835 instance=ExtResource("3_i6468")]
 position = Vector2(563.25, 331.75)
 scale = Vector2(0.023437656, 0.07031209)
 
-[node name="Light18" parent="Lights" unique_id=1473638124 instance=ExtResource("3_i6468")]
+[node name="Light18" parent="Background/Lights" unique_id=1473638124 instance=ExtResource("3_i6468")]
 position = Vector2(569, 324.625)
 scale = Vector2(0.031250026, 0.082031116)
 
-[node name="Light19" parent="Lights" unique_id=2115888077 instance=ExtResource("3_i6468")]
+[node name="Light19" parent="Background/Lights" unique_id=2115888077 instance=ExtResource("3_i6468")]
 position = Vector2(189.00002, 325)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light20" parent="Lights" unique_id=1124091236 instance=ExtResource("3_i6468")]
+[node name="Light20" parent="Background/Lights" unique_id=1124091236 instance=ExtResource("3_i6468")]
 position = Vector2(181.00002, 298)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light21" parent="Lights" unique_id=1439461863 instance=ExtResource("3_i6468")]
+[node name="Light21" parent="Background/Lights" unique_id=1439461863 instance=ExtResource("3_i6468")]
 position = Vector2(158.00002, 289)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light22" parent="Lights" unique_id=1600893628 instance=ExtResource("3_i6468")]
+[node name="Light22" parent="Background/Lights" unique_id=1600893628 instance=ExtResource("3_i6468")]
 position = Vector2(158, 325)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light23" parent="Lights" unique_id=1176563476 instance=ExtResource("3_i6468")]
+[node name="Light23" parent="Background/Lights" unique_id=1176563476 instance=ExtResource("3_i6468")]
 position = Vector2(173, 343)
 scale = Vector2(0.06896974, 0.08593629)
 
-[node name="Light24" parent="Lights" unique_id=1802690000 instance=ExtResource("3_i6468")]
+[node name="Light24" parent="Background/Lights" unique_id=1802690000 instance=ExtResource("3_i6468")]
 position = Vector2(131.89648, 308.12503)
 scale = Vector2(0.096984886, 0.058593404)
 
-[node name="Light25" parent="Lights" unique_id=121200597 instance=ExtResource("3_i6468")]
+[node name="Light25" parent="Background/Lights" unique_id=121200597 instance=ExtResource("3_i6468")]
 position = Vector2(132, 275.00003)
 scale = Vector2(0.096984886, 0.058593404)
 
-[node name="Light26" parent="Lights" unique_id=1550660945 instance=ExtResource("3_i6468")]
+[node name="Light26" parent="Background/Lights" unique_id=1550660945 instance=ExtResource("3_i6468")]
 position = Vector2(114.44824, 328.56253)
 scale = Vector2(0.11099243, 0.044921372)
 
-[node name="Light27" parent="Lights" unique_id=221491388 instance=ExtResource("3_i6468")]
+[node name="Light27" parent="Background/Lights" unique_id=221491388 instance=ExtResource("3_i6468")]
 position = Vector2(96.72412, 341.5)
 scale = Vector2(0.102371216, 0.04687481)
 
-[node name="Light28" parent="Lights" unique_id=890060107 instance=ExtResource("3_i6468")]
+[node name="Light28" parent="Background/Lights" unique_id=890060107 instance=ExtResource("3_i6468")]
 position = Vector2(85.36206, 301.5)
 scale = Vector2(0.11368581, 0.046874832)
 
-[node name="Light29" parent="Lights" unique_id=28438086 instance=ExtResource("3_i6468")]
+[node name="Light29" parent="Background/Lights" unique_id=28438086 instance=ExtResource("3_i6468")]
 position = Vector2(48.181026, 328.25)
 scale = Vector2(0.08809291, 0.05468683)
 
-[node name="Light30" parent="Lights" unique_id=1750332320 instance=ExtResource("3_i6468")]
+[node name="Light30" parent="Background/Lights" unique_id=1750332320 instance=ExtResource("3_i6468")]
 position = Vector2(56.590515, 355)
 scale = Vector2(0.07529646, 0.05468683)
 
-[node name="Light31" parent="Lights" unique_id=857981163 instance=ExtResource("3_i6468")]
+[node name="Light31" parent="Background/Lights" unique_id=857981163 instance=ExtResource("3_i6468")]
 position = Vector2(28.295258, 321.625)
 scale = Vector2(0.084523216, 0.042968165)
 
-[node name="Light32" parent="Lights" unique_id=1884607877 instance=ExtResource("3_i6468")]
+[node name="Light32" parent="Background/Lights" unique_id=1884607877 instance=ExtResource("3_i6468")]
 position = Vector2(28, 348)
 scale = Vector2(0.084523216, 0.042968165)
 
-[node name="Light33" parent="Lights" unique_id=1521657277 instance=ExtResource("3_i6468")]
+[node name="Light33" parent="Background/Lights" unique_id=1521657277 instance=ExtResource("3_i6468")]
 position = Vector2(2.647626, 348.3125)
 scale = Vector2(0.073511705, 0.052733954)
 
-[node name="Light34" parent="Lights" unique_id=186835269 instance=ExtResource("3_i6468")]
+[node name="Light34" parent="Background/Lights" unique_id=186835269 instance=ExtResource("3_i6468")]
 position = Vector2(609.25, 308.5)
 scale = Vector2(0.08593668, 0.046875)
 
-[node name="Light35" parent="Lights" unique_id=444722394 instance=ExtResource("3_i6468")]
+[node name="Light35" parent="Background/Lights" unique_id=444722394 instance=ExtResource("3_i6468")]
 position = Vector2(587, 347.5)
 scale = Vector2(0.031250264, 0.07812506)
 
-[node name="Light36" parent="Lights" unique_id=2050204983 instance=ExtResource("3_i6468")]
+[node name="Light36" parent="Background/Lights" unique_id=2050204983 instance=ExtResource("3_i6468")]
 position = Vector2(626, 348.00003)
 scale = Vector2(0.08593668, 0.046875)
 
-[node name="Light37" parent="Lights" unique_id=53234363 instance=ExtResource("3_i6468")]
+[node name="Light37" parent="Background/Lights" unique_id=53234363 instance=ExtResource("3_i6468")]
 position = Vector2(490, 334.125)
 scale = Vector2(0.031249817, 0.027343372)
 
-[node name="Light38" parent="Lights" unique_id=608155634 instance=ExtResource("3_i6468")]
+[node name="Light38" parent="Background/Lights" unique_id=608155634 instance=ExtResource("3_i6468")]
 position = Vector2(490, 331)
 scale = Vector2(0.031249817, 0.027343372)
 
-[node name="Light39" parent="Lights" unique_id=861817097 instance=ExtResource("3_i6468")]
+[node name="Light39" parent="Background/Lights" unique_id=861817097 instance=ExtResource("3_i6468")]
 position = Vector2(487.5, 331.0625)
 scale = Vector2(0.015624909, 0.029296411)
 
-[node name="Light40" parent="Lights" unique_id=35312239 instance=ExtResource("3_i6468")]
+[node name="Light40" parent="Background/Lights" unique_id=35312239 instance=ExtResource("3_i6468")]
 position = Vector2(487.49997, 334)
 scale = Vector2(0.015625386, 0.03125024)
 
 [node name="Rain" type="GPUParticles2D" parent="." unique_id=1699425557]
-position = Vector2(317, 141)
-amount = 500
+position = Vector2(357, 163)
+amount = 1000
 lifetime = 1.5
 process_material = SubResource("ParticleProcessMaterial_uwc6k")
 

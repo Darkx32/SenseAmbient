@@ -4,6 +4,7 @@ extends Control
 @onready var music: AudioStreamPlayer = $Music
 @onready var rain_sound: AudioStreamPlayer = $RainSound
 @onready var thunder_sound: AudioStreamPlayer = $ThunderSound
+@onready var lights = $Background/Lights
 var flash_duration: float = 0.08
 var max_alpha: float = 1.0
 var original_alpha: float
@@ -11,9 +12,13 @@ var lighting_timer: float = 4
 var can_lighting: bool = true
 
 var tween: Tween
+var background_realsize: Vector2 = Vector2(640.0, 360.0)
 
 func _ready() -> void:
 	original_alpha = background.modulate.a
+	background.resized.connect(update_lights)
+
+	update_lights()
 
 func selected(is_selected: bool):
 	if is_selected:
@@ -58,3 +63,7 @@ func flash_lighting():
 	thunder_sound.finished.connect(func():
 		can_lighting = true
 	)
+
+func update_lights():
+	var proporcao = background.size / background_realsize
+	lights.scale = proporcao
