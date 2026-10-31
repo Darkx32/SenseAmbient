@@ -11,6 +11,7 @@ var movement := 3.0
 var rng := RandomNumberGenerator.new()
 
 @onready var background: ColorRect = $Background
+const PAPER_SOUND = preload("res://prefabs/paper_sound.tscn")
 
 func _ready() -> void:
 	rng.randomize()
@@ -22,6 +23,9 @@ func _ready() -> void:
 	})
 
 func on_tap(local_position: Vector2):
+	var paper_sound = PAPER_SOUND.instantiate() as AudioStreamPlayer
+	add_child(paper_sound)
+
 	var strands: Array[PackedVector2Array] = []
 	radius = rng.randf_range(35, 70)
 
@@ -54,6 +58,9 @@ func on_tap(local_position: Vector2):
 			"strands": strands,
 			"time": 0.0
 		})
+
+	paper_sound.play()
+	paper_sound.finished.connect(paper_sound.queue_free)
 
 	queue_redraw()
 

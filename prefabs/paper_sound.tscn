@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cac8stfxq12d1"]
+
+[ext_resource type="AudioStream" uid="uid://c15bmmwibqnng" path="res://assets/sounds/crunch_paper.ogg" id="1_awfru"]
+
+[node name="PaperSound" type="AudioStreamPlayer" unique_id=2015605516]
+stream = ExtResource("1_awfru")
+volume_db = -7.0
+pitch_scale = 0.7

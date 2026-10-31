@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c7hy6v7s5iqwd"]
 
 [ext_resource type="Script" uid="uid://pnvn6hbnu5gf" path="res://scripts/fear_screen.gd" id="1_06oqn"]
+[ext_resource type="AudioStream" uid="uid://fc3ynexmn26h" path="res://assets/musics/fear.ogg" id="2_suvd6"]
+[ext_resource type="AudioStream" uid="uid://cqr8kgwd0hw5w" path="res://assets/sounds/jumpscare.ogg" id="3_1ed1m"]
 
 [node name="fearScreen" type="Control" unique_id=1381377356]
 layout_mode = 3
@@ -19,3 +21,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1570724077]
+stream = ExtResource("2_suvd6")
+volume_db = -7.0
+parameters/looping = true
+
+[node name="JumpscareSound" type="AudioStreamPlayer" parent="." unique_id=117355189]
+stream = ExtResource("3_1ed1m")
+volume_db = -20.0
+pitch_scale = 1.5

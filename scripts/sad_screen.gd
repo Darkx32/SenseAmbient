@@ -50,12 +50,11 @@ func flash_lighting():
 		background.modulate.a = original_alpha
 	)
 
-	var delay = randf_range(1, 2.5)
+	var delay = randf_range(0.2, 2.5)
 	await get_tree().create_timer(delay).timeout
 
 	thunder_sound.pitch_scale = randf_range(0.8, 1.2)
 	thunder_sound.play()
-
-	await get_tree().create_timer(lighting_timer).timeout
-
-	can_lighting = true
+	thunder_sound.finished.connect(func():
+		can_lighting = true
+	)
