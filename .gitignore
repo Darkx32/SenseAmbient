@@ -9,4 +9,6 @@ export_credentials.cfg
 *.tmp
 
 # Export outputs
+export/
+release.keystore
 *.exe
