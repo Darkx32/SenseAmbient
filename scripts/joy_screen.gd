@@ -2,6 +2,8 @@ extends Control
 
 @export var tile_size: int = 16
 @onready var tilemap: TileMapLayer = $TileMapLayer
+@onready var music: AudioStreamPlayer = $Music
+@onready var leaves_sound: AudioStreamPlayer = $LeavesSound
 var tiles = [
 	Vector2i(0, 0), # Grass
 	Vector2i(1, 0), # Grass with defails
@@ -34,6 +36,8 @@ func create_flowers(local_position: Vector2):
 	particles.position = local_position
 	add_child(particles)
 
+	leaves_sound.play()
+
 func generate_scene():
 	tilemap.clear()
 
@@ -50,6 +54,13 @@ func generate_scene():
 				tilemap.set_cell(tile_position, 0, tiles[2])
 			else:
 				tilemap.set_cell(tile_position, 0, tiles[3])
+
+func selected(is_selected: bool):
+	if is_selected:
+		music.play()
+	else:
+		music.stop()
+		leaves_sound.stop()
 
 func clear() -> void:
 	for child in get_children():

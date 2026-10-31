@@ -103,6 +103,9 @@ func _update_active_screen() -> void:
 		if screen.has_method("set_active"):
 			screen.set_active(i == current_screen)
 
+		if screen.has_method("selected"):
+			screen.selected(i == current_screen)
+
 func _dispatch_tap(pos: Vector2) -> void:
 	if total_screens == 0 or is_dragging:
 		return

@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c60ww1xgjvmiy" path="res://assets/joy_tileset.png" id="1_mggnh"]
 [ext_resource type="Script" uid="uid://g47u4vybe4st" path="res://scripts/joy_screen.gd" id="1_oim8h"]
 [ext_resource type="PackedScene" uid="uid://bdluwbihrixre" path="res://prefabs/flower_particle.tscn" id="3_ef7fm"]
+[ext_resource type="AudioStream" uid="uid://bcv6vvdj13kw5" path="res://assets/musics/happy.ogg" id="4_5oh0r"]
+[ext_resource type="AudioStream" uid="uid://c6mx4wtkj3ndf" path="res://assets/sounds/flowers.mp3" id="5_6v87e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oim8h"]
 texture = ExtResource("1_mggnh")
@@ -158,3 +160,14 @@ script = ExtResource("1_oim8h")
 tile_set = SubResource("TileSet_uwc6k")
 
 [node name="FlowerParticle" parent="." unique_id=1113433440 instance=ExtResource("3_ef7fm")]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1548043397]
+stream = ExtResource("4_5oh0r")
+volume_db = -10.0
+pitch_scale = 1.2
+parameters/looping = true
+
+[node name="LeavesSound" type="AudioStreamPlayer" parent="." unique_id=2007259116]
+stream = ExtResource("5_6v87e")
+volume_db = -5.0
+pitch_scale = 1.05

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bla74ta2wd71w" path="res://scripts/sad_screen.gd" id="1_hoff4"]
 [ext_resource type="Texture2D" uid="uid://b030hom3e1d8c" path="res://assets/sad_parallax/10.png" id="2_1mqe4"]
 [ext_resource type="PackedScene" uid="uid://cddbwdblwxo3y" path="res://prefabs/light.tscn" id="3_i6468"]
+[ext_resource type="AudioStream" uid="uid://vp5rkmr7sr6s" path="res://assets/musics/sad.ogg" id="4_xblwr"]
+[ext_resource type="AudioStream" uid="uid://by43fmbknl5jq" path="res://assets/sounds/rain.ogg" id="5_ptwqs"]
+[ext_resource type="AudioStream" uid="uid://bspqyl6mpa8vg" path="res://assets/sounds/thunder.ogg" id="6_ljs3r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ptwqs"]
 
@@ -183,8 +186,41 @@ scale = Vector2(0.031250264, 0.07812506)
 position = Vector2(626, 348.00003)
 scale = Vector2(0.08593668, 0.046875)
 
+[node name="Light37" parent="Lights" unique_id=53234363 instance=ExtResource("3_i6468")]
+position = Vector2(490, 334.125)
+scale = Vector2(0.031249817, 0.027343372)
+
+[node name="Light38" parent="Lights" unique_id=608155634 instance=ExtResource("3_i6468")]
+position = Vector2(490, 331)
+scale = Vector2(0.031249817, 0.027343372)
+
+[node name="Light39" parent="Lights" unique_id=861817097 instance=ExtResource("3_i6468")]
+position = Vector2(487.5, 331.0625)
+scale = Vector2(0.015624909, 0.029296411)
+
+[node name="Light40" parent="Lights" unique_id=35312239 instance=ExtResource("3_i6468")]
+position = Vector2(487.49997, 334)
+scale = Vector2(0.015625386, 0.03125024)
+
 [node name="Rain" type="GPUParticles2D" parent="." unique_id=1699425557]
 position = Vector2(317, 141)
 amount = 500
 lifetime = 1.5
 process_material = SubResource("ParticleProcessMaterial_uwc6k")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=996887923]
+stream = ExtResource("4_xblwr")
+volume_db = -10.0
+pitch_scale = 0.8
+parameters/looping = true
+
+[node name="RainSound" type="AudioStreamPlayer" parent="." unique_id=1164485765]
+stream = ExtResource("5_ptwqs")
+volume_db = -17.0
+pitch_scale = 0.9
+parameters/looping = true
+
+[node name="ThunderSound" type="AudioStreamPlayer" parent="." unique_id=213590422]
+stream = ExtResource("6_ljs3r")
+volume_db = 3.0
+pitch_scale = 0.8
