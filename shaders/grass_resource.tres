@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dci1av7bg6m5v"]
+
+[ext_resource type="Shader" uid="uid://60xp8hr4p8qi" path="res://shaders/grass_resource.gdshader" id="1_42bdb"]
+
+[resource]
+shader = ExtResource("1_42bdb")
+shader_parameter/speed = 2.5
+shader_parameter/frequency = 12.0
+shader_parameter/amplitude = 0.007
+shader_parameter/min_diff = 0.04

@@ -13,6 +13,8 @@ var tiles = [
 
 var width: int
 var height: int
+var particles_list: Array[GPUParticles2D]
+var max_size_of_list: int = 30
 
 const FLOWER_PARTICLE = preload("res://prefabs/flower_particle.tscn")
 
@@ -32,11 +34,20 @@ func on_tap(local_position: Vector2) -> void:
 func create_flowers(local_position: Vector2):
 	var particles = FLOWER_PARTICLE.instantiate() as GPUParticles2D
 	particles.emitting = true
-	particles.finished.connect(particles.queue_free)
 	particles.position = local_position
 	add_child(particles)
+	particles_list.append(particles)
+	if particles_list.size() > max_size_of_list:
+		var variant = particles_list[0]
+		particles_list.erase(variant)
+		variant.queue_free()
 
 	leaves_sound.play()
+
+	await get_tree().create_timer(1.8).timeout
+
+	if particles:
+		particles.speed_scale = 0
 
 func generate_scene():
 	tilemap.clear()

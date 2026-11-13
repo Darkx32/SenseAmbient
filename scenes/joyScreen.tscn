@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c60ww1xgjvmiy" path="res://assets/joy_tileset.png" id="1_mggnh"]
 [ext_resource type="Script" uid="uid://g47u4vybe4st" path="res://scripts/joy_screen.gd" id="1_oim8h"]
+[ext_resource type="Material" uid="uid://dci1av7bg6m5v" path="res://shaders/grass_resource.tres" id="2_lnuj1"]
 [ext_resource type="PackedScene" uid="uid://bdluwbihrixre" path="res://prefabs/flower_particle.tscn" id="3_ef7fm"]
 [ext_resource type="AudioStream" uid="uid://bcv6vvdj13kw5" path="res://assets/musics/happy.ogg" id="4_5oh0r"]
 [ext_resource type="AudioStream" uid="uid://c6mx4wtkj3ndf" path="res://assets/sounds/flowers.mp3" id="5_6v87e"]
@@ -157,6 +158,7 @@ size_flags_vertical = 3
 script = ExtResource("1_oim8h")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=102029483]
+material = ExtResource("2_lnuj1")
 tile_set = SubResource("TileSet_uwc6k")
 
 [node name="FlowerParticle" parent="." unique_id=1113433440 instance=ExtResource("3_ef7fm")]
