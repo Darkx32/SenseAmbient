@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cwlwson10n3vi"]
+
+[ext_resource type="Script" uid="uid://dtmrjaxt6qp5y" path="res://scripts/relax_screen.gd" id="1_qtd42"]
+
+[node name="relaxScreen" type="Control" unique_id=1694330711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtd42")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1044823136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.65882355, 0.84705883, 1, 1)

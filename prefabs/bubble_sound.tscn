@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bik16wbdmxvp3"]
+
+[ext_resource type="AudioStream" uid="uid://dcdoqk2tpgxb5" path="res://assets/sounds/bubble.ogg" id="1_h2qbg"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=567485016]
+stream = ExtResource("1_h2qbg")
+volume_db = -5.0
+autoplay = true
