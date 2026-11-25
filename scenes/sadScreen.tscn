@@ -7,6 +7,11 @@
 [ext_resource type="AudioStream" uid="uid://by43fmbknl5jq" path="res://assets/sounds/rain.ogg" id="5_ptwqs"]
 [ext_resource type="AudioStream" uid="uid://bspqyl6mpa8vg" path="res://assets/sounds/thunder.ogg" id="6_ljs3r"]
 
+[sub_resource type="Curve" id="Curve_uwc6k"]
+_limits = [0.20224726, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20224726), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ptwqs"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ljs3r"]
@@ -30,6 +35,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hoff4")
+
+[node name="LightingBolt" type="Line2D" parent="." unique_id=1703376554]
+width = 3.0
+width_curve = SubResource("Curve_uwc6k")
+default_color = Color(0.8392157, 0.9607843, 1, 1)
 
 [node name="Background" type="TextureRect" parent="." unique_id=202964348]
 self_modulate = Color(0.38431373, 0.38431373, 0.38431373, 1)
@@ -206,6 +216,74 @@ scale = Vector2(0.015624909, 0.029296411)
 [node name="Light40" parent="Background/Lights" unique_id=35312239 instance=ExtResource("3_i6468")]
 position = Vector2(487.49997, 334)
 scale = Vector2(0.015625386, 0.03125024)
+
+[node name="Light41" parent="Background/Lights" unique_id=780157714 instance=ExtResource("3_i6468")]
+position = Vector2(444.75003, 265.75003)
+scale = Vector2(0.117187865, 0.03906164)
+
+[node name="Light42" parent="Background/Lights" unique_id=1625832728 instance=ExtResource("3_i6468")]
+position = Vector2(457, 270.00003)
+scale = Vector2(0.117187865, 0.03906164)
+
+[node name="Light43" parent="Background/Lights" unique_id=1581096793 instance=ExtResource("3_i6468")]
+position = Vector2(444.00003, 274.00003)
+scale = Vector2(0.10156284, 0.031249614)
+
+[node name="Light44" parent="Background/Lights" unique_id=1894320404 instance=ExtResource("3_i6468")]
+position = Vector2(486.125, 248.37502)
+scale = Vector2(0.08984356, 0.01953082)
+
+[node name="Light45" parent="Background/Lights" unique_id=1589362341 instance=ExtResource("3_i6468")]
+position = Vector2(548.25, 282.09378)
+scale = Vector2(0.054687932, 0.028319571)
+
+[node name="Light46" parent="Background/Lights" unique_id=1904131848 instance=ExtResource("3_i6468")]
+position = Vector2(354.5, 248.5)
+scale = Vector2(0.14062473, 0.04687504)
+
+[node name="Light47" parent="Background/Lights" unique_id=1372804036 instance=ExtResource("3_i6468")]
+position = Vector2(352.75, 266)
+scale = Vector2(0.10156272, 0.04687504)
+
+[node name="Light48" parent="Background/Lights" unique_id=1298993746 instance=ExtResource("3_i6468")]
+position = Vector2(276.5, 229)
+scale = Vector2(0.046874993, 0.18749988)
+
+[node name="Light49" parent="Background/Lights" unique_id=1206632382 instance=ExtResource("3_i6468")]
+position = Vector2(280, 235)
+scale = Vector2(0.031250197, 0.18750024)
+
+[node name="Light50" parent="Background/Lights" unique_id=1846282423 instance=ExtResource("3_i6468")]
+position = Vector2(289.75, 233.5)
+scale = Vector2(0.039061897, 0.32812515)
+
+[node name="Light51" parent="Background/Lights" unique_id=125036982 instance=ExtResource("3_i6468")]
+position = Vector2(303.125, 231.25)
+scale = Vector2(0.035155766, 0.24218762)
+
+[node name="Light52" parent="Background/Lights" unique_id=509352443 instance=ExtResource("3_i6468")]
+position = Vector2(194.44826, 214.56252)
+scale = Vector2(0.2359924, 0.044921372)
+
+[node name="Light53" parent="Background/Lights" unique_id=1742131679 instance=ExtResource("3_i6468")]
+position = Vector2(188.44824, 236.78125)
+scale = Vector2(0.17349242, 0.0380858)
+
+[node name="Light54" parent="Background/Lights" unique_id=894272644 instance=ExtResource("3_i6468")]
+position = Vector2(195, 241.10938)
+scale = Vector2(0.12499997, 0.034667805)
+
+[node name="Light55" parent="Background/Lights" unique_id=201614892 instance=ExtResource("3_i6468")]
+position = Vector2(73.00001, 249.06252)
+scale = Vector2(0.096984886, 0.029296702)
+
+[node name="Light56" parent="Background/Lights" unique_id=1029663050 instance=ExtResource("3_i6468")]
+position = Vector2(566, 282)
+scale = Vector2(0.054687932, 0.028319571)
+
+[node name="Light57" parent="Background/Lights" unique_id=1478239692 instance=ExtResource("3_i6468")]
+position = Vector2(570.5, 272.74997)
+scale = Vector2(0.046873912, 0.023437541)
 
 [node name="Rain" type="GPUParticles2D" parent="." unique_id=1699425557]
 position = Vector2(357, 163)

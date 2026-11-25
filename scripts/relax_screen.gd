@@ -64,4 +64,5 @@ func spawn_particles(local_position: Vector2) -> void:
 func clear() -> void:
 	for child in get_children():
 		if child is GPUParticles2D or child is AudioStreamPlayer:
-			child.queue_free()
+			if is_instance_valid(child):
+				child.queue_free()

@@ -14,7 +14,7 @@ var tiles = [
 var width: int
 var height: int
 var particles_list: Array[GPUParticles2D]
-var max_size_of_list: int = 30
+var max_size_of_list: int = 50
 
 const FLOWER_PARTICLE = preload("res://prefabs/flower_particle.tscn")
 
@@ -40,7 +40,8 @@ func create_flowers(local_position: Vector2):
 	if particles_list.size() > max_size_of_list:
 		var variant = particles_list[0]
 		particles_list.erase(variant)
-		variant.queue_free()
+		if is_instance_valid(variant):
+			variant.queue_free()
 
 	leaves_sound.play()
 
@@ -76,4 +77,6 @@ func selected(is_selected: bool):
 func clear() -> void:
 	for child in get_children():
 		if child is GPUParticles2D:
-			child.queue_free()
+			if is_instance_valid(child):
+				child.queue_free()
+	particles_list.clear()
